@@ -1,0 +1,113 @@
+@font-face {
+    font-family: Outfit;
+    src: url("./assets/fonts/Outfit-VariableFont_wght.ttf");
+  }
+  
+  body {
+    margin: 0;
+    font-family: Outfit;
+    background-color: hsl(217, 54%, 11%);
+  }
+  
+  .card {
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 20px;
+    padding: 7%;
+  }
+  
+  .img-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0.5;
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .view-icon {
+    width: 50px;
+    opacity: 1;
+    z-index: 1;
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .prod-img {
+    z-index: 0;
+  }
+  
+  .prod-title {
+    color: hsl(0, 0%, 100%);
+  }
+  
+  .prod-description,
+  .creator-msg {
+    color: hsl(215, 51%, 70%);
+    font-size: 18px;
+  }
+  
+  .prod-price-days {
+    border-bottom: solid 1px hsl(215, 32%, 27%);
+    display: flex;
+    align-items: center;
+    margin-bottom: 6%;
+  }
+  
+  .prod-price {
+    color: hsl(178, 100%, 50%);
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .prod-days {
+    font-size: 14px;
+    color: hsl(215, 51%, 70%);
+  }
+  
+  .prod-price img,
+  .prod-days img {
+    margin-right: 3%;
+  }
+  
+  .prod-days {
+    text-align: end;
+  }
+  
+  .creator-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .creator-msg {
+    margin: 0;
+  }
+  
+  .creator-name {
+    color: white;
+  }
+  
+  .attribution {
+    font-size: 12px;
+    text-align: center;
+    color: white;
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
