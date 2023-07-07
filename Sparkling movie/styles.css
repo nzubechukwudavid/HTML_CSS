@@ -1,5 +1,14 @@
-@font-face {
-    font-family: Outfit;
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    color: white;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  @font-face {
+    font-family: "Brush Script MT", cursive;
     src: url("./assets/fonts/Outfit-VariableFont_wght.ttf");
   }
   
@@ -33,14 +42,14 @@
     align-items: center;
     justify-content: center;
     background-color: hsl(178, 100%, 50%);
-    opacity: 0.5;
+    opacity: 50%;
     z-index: 1;
     border-radius: 10px;
   }
   
   .view-icon {
     width: 50px;
-    opacity: 1;
+    opacity: 100%;
     z-index: 1;
     position: absolute;
     visibility: hidden;
@@ -62,9 +71,11 @@
   
   .prod-price-days {
     border-bottom: solid 1px hsl(215, 32%, 27%);
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    overflow: hidden;
     margin-bottom: 6%;
+    align-items: center;
   }
   
   .prod-price {
@@ -88,7 +99,8 @@
   }
   
   .creator-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
     align-items: center;
     margin: 0;
   }
@@ -101,13 +113,202 @@
     color: white;
   }
   
-  .attribution {
-    font-size: 12px;
-    text-align: center;
-    color: white;
+  @media only screen and (max-width: 426px) {
+    body {
+      padding: 7%;
+    }
+  
+    .prod-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  
+    .prod-description {
+      margin: 0;
+    }
+  
+    .avatar {
+      border: solid 2px white;
+      border-radius: 50%;
+      width: 60%;
+    }
   }
   
-  .attribution a {
-    color: hsl(228, 45%, 44%);
+  @media only screen and (min-width: 426px) and (max-width: 767px) {
+    body {
+      padding: 7%;
+    }
+  
+    .card {
+      width: 60%;
+      margin: 0 auto 0 auto;
+      padding: 5%;
+    }
+  
+    .prod-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  
+    .prod-description {
+      margin: 0;
+    }
+  
+    .avatar {
+      border: solid 2px white;
+      border-radius: 50%;
+      width: 60%;
+    }
+  }
+  
+  @media only screen and (min-width: 767px) and (max-width: 1023px) {
+    body {
+      padding: 10%;
+    }
+    .card {
+      width: 42%;
+      height: auto;
+      padding: 1.5%;
+      position: relative;
+      margin: 0 auto 0 auto;
+    }
+  
+    .prod-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  
+    .prod-title {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+  
+    .creator-container {
+      grid-template-columns: 0.15fr 0.85fr;
+    }
+  
+    .avatar {
+      width: 70%;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-bottom: 0;
+    }
+  }
+  
+  @media only screen and (min-width: 1023px) and (max-width: 1280px) {
+    body {
+      padding: 10%;
+    }
+    .card {
+      width: 35%;
+      height: auto;
+      padding: 1.5%;
+      position: relative;
+      margin: 0 auto 0 auto;
+    }
+  
+    .prod-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  
+    .prod-title {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+  
+    .creator-container {
+      grid-template-columns: 0.15fr 0.85fr;
+    }
+  
+    .avatar {
+      width: 70%;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-bottom: 0;
+    }
+  
+    .creator-name:hover {
+      color: hsl(178, 100%, 50%);
+    }
+  
+    .img-container:hover .overlay,
+    .img-container:hover .view-icon {
+      visibility: visible;
+      cursor: pointer;
+    }
+  
+    .overlay::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .prod-title:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    body {
+      overflow: hidden;
+      padding-top: 5%;
+    }
+    .card {
+      width: 20%;
+      height: auto;
+      padding: 1.5%;
+      position: relative;
+      margin: 0 auto 0 auto;
+    }
+  
+    .prod-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  
+    .prod-title {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+  
+    .creator-container {
+      grid-template-columns: 0.15fr 0.85fr;
+    }
+  
+    .avatar {
+      width: 70%;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-bottom: 0;
+    }
+  
+    .img-container:hover .overlay,
+    .img-container:hover .view-icon {
+      visibility: visible;
+      cursor: pointer;
+    }
+  
+    .overlay::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .prod-title:hover {
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+  
+    .creator-name:hover {
+      color: hsl(178, 100%, 50%);
+    }
   }
   
